@@ -27,6 +27,8 @@ namespace DT102G___Laboration_1._2
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
