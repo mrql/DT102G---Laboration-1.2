@@ -1,22 +1,33 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>@ViewData["Title"]</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Grunderna i ASP.NET / Razor</title>
 </head>
 <body>
     <header>
-
+        <a href="/" class="logo">Grunderna i ASP.net / Razor</a>
+        <div><span class="bold">Dagens datum är: </span> <span>@DateTime.Now.ToString("yyyy-MM-dd") </span></div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="/">Index</a></li>
-            <li><a href="/About">About</a></li>
-            <li><a href="/Razor">Razor</a></li>
-        </ul>
-    </nav>
-    <main>
-        @RenderBody()
-    </main>
+    <div id="wrapper">
+        <nav>
+            <ul>
+                <li><a href="/">Hem</a></li>
+                <li><a href="/Razor">Razor</a></li>
+                <li><a href="/Om">Om sidan</a></li>
+            </ul>
+        </nav>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <span>Av Linus Östlund - Kontakta mig via epost: <a href="mailto:list1507@student.miun.se">list1507@student.miun.se</a></span>
+    </footer>
+    <script href="/js/main.js"></script>
 </body>
 </html>

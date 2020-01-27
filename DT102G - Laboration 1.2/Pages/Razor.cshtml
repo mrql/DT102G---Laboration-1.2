@@ -5,4 +5,42 @@
 }
 
 <h1>Razor</h1>
+<h2>Information</h2>
+<span class="bold">Datum/klockslag: </span><span>@DateTime.Now</span>
 
+@{
+    DateTime date = DateTime.Now;
+
+    if(date.DayOfWeek == DayOfWeek.Monday)
+    {
+        <span class="block">Idag är det måndag!</span>
+    }
+    else
+    {
+        <span class="block">Idag är det inte måndag.</span>
+    }
+}
+
+<h3>Kurser jag har läst</h3>
+<ul>
+    @{
+        List<string> courses = new List<string>();
+
+        courses.Add("DT057G, Webbutveckling I");
+        courses.Add("DT084G, Introduktion till programmering med JavaScript");
+        courses.Add("DT163G, Digital bildbehandling för webb");
+        courses.Add("GD008G, Typografi och form för webb");
+        courses.Add("DT003G, Databaser");
+        courses.Add("DT093G, Webbutveckling II");
+        courses.Add("DT152G, Webbdesign för CMS");
+        courses.Add("DT173G, Webbutveckling III");
+        courses.Add("IK060G, Projektledning");
+        courses.Add("DT162G, JavaScript-baserad webbutveckling");
+        courses.Add("DT071G, Programmering I C#.net");
+
+        foreach (string course in courses)
+        {
+            <li>@course</li>
+        }
+    }
+</ul>

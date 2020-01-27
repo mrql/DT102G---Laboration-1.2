@@ -1,5 +1,246 @@
-﻿body {
+﻿/* ====== Reset ===== */
+/*
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ===== Reset end ===== */
+
+
+
+/* = Typography = */
+/* - General - */
+html {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #fafafa;
+    color: #404040;
+    line-height: 1.25;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* - Headings - */
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
 }
 
 
+/* - General text - */
+span,
+p,
+a,
+li {
+    font-size: 1.8rem;
+}
+
+p {
+    max-width: 65em;
+}
+
+/* - Links - */
+a {
+    text-decoration: none;
+}
+
+    a:visited {
+        color: #404040;
+    }
+
+/* - Lists - */
+ul li {
+    padding: .25em;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+
+/* - Typographic classes - */
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.block {
+    display: block;
+}
+
+/* - Top-down - */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10rem;
+    max-width: 100%;
+    padding: 2rem 4rem;
+    border: 1px solid #e6e6e6;
+    box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+    .logo {
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #ffd966
+    }
+
+        .logo:visited {
+            color: orange;
+        }
+
+#wrapper {
+    flex-grow:1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav {
+    flex-basis: 30rem;
+    margin: 2rem;
+    border: 1px solid #e6e6e6;
+    box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: white;
+}
+
+        nav li {
+            font-weight:bold;
+            margin:2rem;
+            list-style:none;
+        }
+
+            nav li a {
+                font-size: 2.2rem;
+            }
+
+    main {
+        flex-basis: auto;
+        flex-grow: 1;
+        margin: 2rem;
+        padding: 3rem 4rem 5rem;
+        border: 1px solid #e6e6e6;
+        box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.1);
+        background-color: white;
+    }
+
+        main > *{
+            margin:1rem 0;
+        }
+
+footer {
+    text-align: center;
+    max-width: 100%;
+    padding: 2rem;
+    border: 1px solid #e6e6e6;
+    box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+/* - Mobile/tablet - */
+@media only screen and (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header div{
+        padding: 1rem;
+    }
+
+
+    #wrapper {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-basis: 100%;
+        margin: 2rem 0;
+    }
+
+    main {
+        flex-basis: 100%;
+        margin: 2rem 0;
+    }
+}
