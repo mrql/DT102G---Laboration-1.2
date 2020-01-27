@@ -1,1 +1,1 @@
-﻿
+﻿console.log("This message confirms that JavaScript is, indeed, supported on this website.");
